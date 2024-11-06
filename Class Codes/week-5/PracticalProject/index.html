@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Portfolio website showcasing my projects, skills, and contact information."
+    />
+    <meta name="author" content="Your Name" />
+    <meta
+      name="keywords"
+      content="portfolio, web developer, projects, contact, responsive design"
+    />
+    <title>Portfolio | Your Name</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#home">YourLogo</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="home-section">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Your Name</span></h1>
+        <p>Creative Front-end Developer</p>
+        <a href="#projects" class="cta-btn">View My Work</a>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img
+            src="img/profile-pic.png"
+            alt="Your Photo"
+            class="profile-photo"
+          />
+          <div class="bio">
+            <p>
+              I'm a passionate front-end web developer with expertise in
+              building responsive and interactive websites. My goal is to create
+              elegant user experiences using modern web technologies.
+            </p>
+            <a href="resume.pdf" class="resume-btn">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h3>HTML & CSS</h3>
+            <p>
+              Expert in crafting semantic, accessible HTML and well-structured
+              CSS for modern web development.
+            </p>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <p>
+              Proficient in JavaScript for building dynamic, interactive web
+              applications.
+            </p>
+          </div>
+          <div class="skill">
+            <h3>React</h3>
+            <p>
+              Experienced in building single-page applications using React and
+              modern JavaScript frameworks.
+            </p>
+          </div>
+          <div class="skill">
+            <h3>Responsive Design</h3>
+            <p>
+              Skilled in creating mobile-first, fully responsive websites using
+              CSS Flexbox and Grid.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+          <div class="project-item">
+            <img src="img/project1.jpg" alt="Project 1" class="project-img" />
+            <h3>Project Title 1</h3>
+            <p>Short description of the project and the technologies used.</p>
+            <a href="#" class="project-link">View Details</a>
+          </div>
+          <div class="project-item">
+            <img src="img/project2.jpg" alt="Project 2" class="project-img" />
+            <h3>Project Title 2</h3>
+            <p>Short description of the project and the technologies used.</p>
+            <a href="#" class="project-link">View Details</a>
+          </div>
+          <div class="project-item">
+            <img src="img/project3.jpg" alt="Project 3" class="project-img" />
+            <h3>Project Title 3</h3>
+            <p>Short description of the project and the technologies used.</p>
+            <a href="#" class="project-link">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST" class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <ul class="social-links">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

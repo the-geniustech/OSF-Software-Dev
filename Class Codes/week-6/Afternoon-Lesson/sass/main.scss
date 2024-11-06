@@ -1,0 +1,63 @@
+$primary-color: #0000ff;
+$secondary-color: #ff6f61;
+$tertiary-color: #00ff00;
+$text-color-light: #f2f2f2;
+$text-color-dark: #333;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  background-color: $primary-color;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+
+  li a {
+    color: $text-color-dark;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+%btn-style {
+  color: $text-color-light;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  width: 150px;
+  text-align: center;
+}
+
+.nav__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &--main {
+    background-color: $secondary-color;
+    @extend %btn-style;
+  }
+
+  &--hot {
+    background-color: $tertiary-color;
+    @extend %btn-style;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "afternoon-lesson",
+  "version": "1.0.0",
+  "description": "sass lessons",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch sass/main.scss:css/style.css"
+  },
+  "author": "hakeem",
+  "license": "ISC"
+}

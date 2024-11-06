@@ -1,0 +1,355 @@
+// Variables
+$primary-color: #0a58ca;
+$secondary-color: #f4f4f9;
+$text-color: #333;
+$background-color: #f9f9fc;
+$accent-color: #ff6f61;
+$font-family: "Arial", sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Base Styling
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
+  line-height: 1.6;
+}
+
+// Header
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem 0;
+
+  &__container {
+    @include container;
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    &-link {
+      color: white;
+      text-decoration: none;
+    }
+
+    &__tagline {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: lighten(white, 40%);
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    &-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__cta-btn {
+    padding: 0.5rem 1rem;
+    background-color: $accent-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  background: linear-gradient(
+    to right,
+    $primary-color,
+    darken($primary-color, 10%)
+  );
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+
+  &__content {
+    @include container;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__cta-btn {
+    padding: 0.75rem 2rem;
+    background-color: $accent-color;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
+
+// Categories Section
+.categories {
+  padding: 3rem 0;
+  background-color: $background-color;
+
+  &__container {
+    @include container;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+
+    &-title {
+      font-size: 1.3rem;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+      color: $text-color;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Courses Section
+.courses {
+  padding: 3rem 0;
+
+  &__container {
+    @include container;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+
+    &-title {
+      font-size: 1.3rem;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      font-size: 1rem;
+      color: $text-color;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Contact Section
+.contact {
+  padding: 3rem 0;
+  background-color: $secondary-color;
+
+  &__container {
+    @include container;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    &-group {
+      margin-bottom: 1.5rem;
+    }
+
+    &__label {
+      display: block;
+      font-size: 1rem;
+      color: $text-color;
+      margin-bottom: 0.5rem;
+    }
+
+    &__input,
+    &__textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid darken($secondary-color, 20%);
+      border-radius: 5px;
+      font-size: 1rem;
+      color: $text-color;
+      background-color: white;
+    }
+
+    &__submit-btn {
+      padding: 0.75rem 2rem;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// Footer Section
+.footer {
+  background-color: darken($primary-color, 15%);
+  color: white;
+  padding: 2rem 0;
+
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+
+    &-link {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+    &-link {
+      color: lighten(white, 40%);
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: lighten(white, 40%);
+  }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>720degree Hub - Coding Bootcamp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="#" class="header__logo-link">720degree Hub</a>
+          <!-- <span class="header__tagline"
+            >Empowering the Next Generation of Tech Innovators</span
+          > -->
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#categories" class="header__nav-link">Schools</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#courses" class="header__nav-link">Courses</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contact" class="header__nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#categories" class="header__cta-btn">Get Started</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Unlock Your Potential at 720degree Hub</h1>
+        <p class="hero__subtitle">
+          Join our coding bootcamp and embark on a transformative journey with
+          expert-led training in tech’s most sought-after skills.
+        </p>
+        <a href="#categories" class="hero__cta-btn">Explore Our Programs</a>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+      <div class="categories__container">
+        <h2 class="categories__title">Our Schools</h2>
+        <div class="categories__list">
+          <article class="categories__item">
+            <img
+              src="icon-product.png"
+              alt="Product Icon"
+              class="categories__icon"
+            />
+            <h3 class="categories__item-title">School of Product</h3>
+            <p class="categories__item-description">
+              Learn the art of product development, design, and management with
+              hands-on projects.
+            </p>
+          </article>
+          <article class="categories__item">
+            <img
+              src="icon-engineering.png"
+              alt="Engineering Icon"
+              class="categories__icon"
+            />
+            <h3 class="categories__item-title">School of Engineering</h3>
+            <p class="categories__item-description">
+              Master the technical skills required to become a top-notch
+              software engineer.
+            </p>
+          </article>
+          <article class="categories__item">
+            <img src="icon-data.png" alt="Data Icon" class="categories__icon" />
+            <h3 class="categories__item-title">School of Data</h3>
+            <p class="categories__item-description">
+              Delve into the world of data analysis, science, and engineering to
+              harness the power of data.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section id="courses" class="courses">
+      <div class="courses__container">
+        <h2 class="courses__title">Featured Courses</h2>
+        <div class="courses__list">
+          <article class="courses__item">
+            <img
+              src="icon-design.png"
+              alt="Product Design Icon"
+              class="courses__icon"
+            />
+            <h3 class="courses__item-title">Product Design</h3>
+            <p class="courses__item-description">
+              Discover the fundamentals of product design and create
+              user-centered solutions.
+            </p>
+          </article>
+          <article class="courses__item">
+            <img
+              src="icon-data-science.png"
+              alt="Data Science Icon"
+              class="courses__icon"
+            />
+            <h3 class="courses__item-title">Data Science</h3>
+            <p class="courses__item-description">
+              Unlock the potential of data to build powerful predictive models
+              and insights.
+            </p>
+          </article>
+          <article class="courses__item">
+            <img
+              src="icon-backend.png"
+              alt="Backend Development Icon"
+              class="courses__icon"
+            />
+            <h3 class="courses__item-title">Backend Development</h3>
+            <p class="courses__item-description">
+              Build scalable and secure server-side applications using modern
+              technologies.
+            </p>
+          </article>
+          <!-- Additional courses -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="contact__container">
+        <h2 class="contact__title">Get in Touch</h2>
+        <p class="contact__text">
+          Have questions about our programs? Contact us and we’ll be happy to
+          assist!
+        </p>
+        <form class="contact__form" action="#" method="POST">
+          <div class="contact__form-group">
+            <label for="name" class="contact__label">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact__input"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="contact__form-group">
+            <label for="email" class="contact__label">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact__input"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+          <div class="contact__form-group">
+            <label for="message" class="contact__label">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact__textarea"
+              placeholder="Write your message here"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="contact__submit-btn">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__social">
+          <a href="#" class="footer__social-link">Facebook</a>
+          <a href="#" class="footer__social-link">Twitter</a>
+          <a href="#" class="footer__social-link">LinkedIn</a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Home</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#categories" class="footer__nav-link">Schools</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#courses" class="footer__nav-link">Courses</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#contact" class="footer__nav-link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__text">
+          &copy; 2024 720degree Hub. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
