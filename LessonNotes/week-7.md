@@ -289,3 +289,15 @@ module.exports = {
   },
 };
 ```
+
+### **Week 7: Outcome**
+
+By the end of Week 7, students will have gained a solid understanding of **Tailwind CSS** and how to effectively use its utility-first approach to build clean, maintainable, and scalable designs. They will:
+
+- Understand the **philosophy of utility-first CSS**, how it differs from traditional CSS frameworks, and how it simplifies design and layout processes.
+- Successfully **set up Tailwind CSS** in their projects, configuring it with tools like PostCSS or a build tool such as Vite or Webpack.
+- Be proficient in using **common utility classes** for typography, spacing, and layout, such as creating grids and flexible layouts using Flexbox and Grid utilities.
+- Apply **responsive design techniques** using Tailwind's mobile-first utilities, ensuring that websites are optimized for various screen sizes and devices.
+- Customize the **Tailwind configuration file** to extend or override default values for colors, spacing, and breakpoints to fit specific project needs.
+
+Through hands-on practice, they will build layouts with **minimal custom CSS** by relying on Tailwind’s powerful utility classes, laying the groundwork for more complex, responsive web projects in future weeks.
