@@ -39,7 +39,11 @@ body {
 .header {
   background-color: $primary-color;
   color: white;
-  padding: 1rem 0;
+  width: 100%;
+  height: 80px;
+  @include flex-center;
+  position: fixed;
+  top: 0;
 
   &__container {
     @include container;
@@ -54,18 +58,14 @@ body {
     &-link {
       color: white;
       text-decoration: none;
-    }
-
-    &__tagline {
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: lighten(white, 40%);
+      @include flex-center;
     }
   }
 
   &__nav {
     &-list {
       display: flex;
+      list-style: none;
       gap: 1.5rem;
     }
 
@@ -84,6 +84,7 @@ body {
   &__cta-btn {
     padding: 0.5rem 1rem;
     background-color: $accent-color;
+    text-decoration: none;
     color: white;
     border: none;
     border-radius: 5px;
@@ -98,22 +99,27 @@ body {
 
 // Hero Section
 .hero {
-  background: linear-gradient(
-    to right,
-    $primary-color,
-    darken($primary-color, 10%)
-  );
-  color: white;
+  height: 100vh;
+  // height: calc(100vh - 80px);
+  background: url("../img/720entrance.jpg") no-repeat center top/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $primary-color;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   text-align: center;
   padding: 3rem 0;
 
   &__content {
     @include container;
+    max-width: 600px;
   }
 
   &__title {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    line-height: 1;
+    margin-bottom: 5rem;
   }
 
   &__subtitle {
@@ -178,12 +184,13 @@ body {
       font-size: 1rem;
       color: $text-color;
     }
+  }
 
-    &__icon {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 1rem;
-    }
+  &__icon {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
   }
 }
 
@@ -228,76 +235,178 @@ body {
       font-size: 1rem;
       color: $text-color;
     }
+  }
 
-    &__icon {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 1rem;
-    }
+  &__icon {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
   }
 }
 
 // Contact Section
+// .contact {
+//   padding: 3rem 0;
+//   background-color: $secondary-color;
+
+//   &__container {
+//     @include container;
+//     text-align: center;
+//   }
+
+//   &__title {
+//     font-size: 2rem;
+//     color: $primary-color;
+//     margin-bottom: 1rem;
+//   }
+
+//   &__text {
+//     font-size: 1.1rem;
+//     color: $text-color;
+//     margin-bottom: 2rem;
+//   }
+
+//   &__form {
+//     max-width: 600px;
+//     margin: 0 auto;
+
+//     &-group {
+//       margin-bottom: 1.5rem;
+//     }
+
+//     &__label {
+//       display: block;
+//       font-size: 1rem;
+//       color: $text-color;
+//       margin-bottom: 0.5rem;
+//     }
+
+//     &__input,
+//     &__textarea {
+//       width: 100%;
+//       padding: 0.75rem;
+//       border: 1px solid darken($secondary-color, 20%);
+//       border-radius: 5px;
+//       font-size: 1rem;
+//       color: $text-color;
+//       background-color: white;
+//     }
+
+//     &__submit-btn {
+//       padding: 0.75rem 2rem;
+//       background-color: $primary-color;
+//       color: white;
+//       border: none;
+//       border-radius: 5px;
+//       font-weight: bold;
+//       cursor: pointer;
+//       transition: background-color 0.3s;
+
+//       &:hover {
+//         background-color: darken($primary-color, 10%);
+//       }
+//     }
+//   }
+// }
+
+// Contact Section
 .contact {
-  padding: 3rem 0;
-  background-color: $secondary-color;
+  background-color: $background-color;
+  padding: 4rem 2rem;
+  font-family: $font-family;
 
   &__container {
     @include container;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
     text-align: center;
   }
 
   &__title {
     font-size: 2rem;
+    font-weight: 700;
     color: $primary-color;
     margin-bottom: 1rem;
   }
 
   &__text {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     color: $text-color;
     margin-bottom: 2rem;
+    line-height: 1.5;
   }
 
   &__form {
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+    gap: 1.5rem;
 
-    &-group {
-      margin-bottom: 1.5rem;
+    &--group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
-    &__label {
-      display: block;
+    &--label {
       font-size: 1rem;
-      color: $text-color;
+      color: $primary-color;
+      font-weight: 500;
       margin-bottom: 0.5rem;
     }
 
-    &__input,
-    &__textarea {
+    &--input,
+    &--textarea {
       width: 100%;
-      padding: 0.75rem;
-      border: 1px solid darken($secondary-color, 20%);
-      border-radius: 5px;
+      padding: 0.75rem 1rem;
       font-size: 1rem;
       color: $text-color;
-      background-color: white;
+      background-color: #fff;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+
+      &::placeholder {
+        color: darken($secondary-color, 20%);
+      }
+
+      &:focus {
+        border-color: lighten($primary-color, 20%);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
     }
 
-    &__submit-btn {
-      padding: 0.75rem 2rem;
-      background-color: $primary-color;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
+    &--textarea {
+      resize: vertical;
+    }
+  }
 
-      &:hover {
-        background-color: darken($primary-color, 10%);
-      }
+  &__submit-btn {
+    align-self: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: $accent-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -336,6 +445,10 @@ body {
     display: flex;
     gap: 1.5rem;
     margin-top: 1rem;
+
+    &-list {
+      list-style: none;
+    }
 
     &-link {
       color: lighten(white, 40%);

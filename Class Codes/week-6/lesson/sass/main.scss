@@ -1,15 +1,8 @@
-$primary-color: #0000ff;
-$secondary-color: #ff6f61;
-$tertiary-color: #00ff00;
-$white-color: #f2f2f2;
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "abstract/functions";
 
-// @mixin
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "base/base";
 
 .navigation {
   background-color: $primary-color;
@@ -28,21 +21,17 @@ $white-color: #f2f2f2;
   li a {
     &:link,
     &:visited {
-      color: $white-color;
-      text-decoration: none;
-      text-transform: uppercase;
+      @include link-style($text-color-light);
     }
   }
 }
 
 %btn-style {
-  color: $white-color;
+  @include link-style($text-color-dark);
   padding: 8px 16px;
   border-radius: 50px;
-  width: 150px;
+  width: calc-width();
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .nav__btn {
@@ -52,13 +41,18 @@ $white-color: #f2f2f2;
   &--main {
     background-color: $secondary-color;
     @extend %btn-style;
+
+    &:hover {
+      background-color: darken($secondary-color, 15%);
+    }
   }
 
   &--hot {
     background-color: $tertiary-color;
     @extend %btn-style;
+
+    &:hover {
+      background-color: lighten($tertiary-color, 20%);
+    }
   }
 }
-
-// .nav__links li a:link {
-// }

@@ -14,7 +14,9 @@
     <header class="header">
       <div class="header__container">
         <div class="header__logo">
-          <a href="#" class="header__logo-link">720degree Hub</a>
+          <a href="#" class="header__logo-link"
+            ><img src="/img/720logo.png" alt=""
+          /></a>
           <!-- <span class="header__tagline"
             >Empowering the Next Generation of Tech Innovators</span
           > -->
@@ -43,10 +45,10 @@
     <section class="hero">
       <div class="hero__content">
         <h1 class="hero__title">Unlock Your Potential at 720degree Hub</h1>
-        <p class="hero__subtitle">
+        <!-- <p class="hero__subtitle">
           Join our coding bootcamp and embark on a transformative journey with
           expert-led training in tech’s most sought-after skills.
-        </p>
+        </p> -->
         <a href="#categories" class="hero__cta-btn">Explore Our Programs</a>
       </div>
     </section>
@@ -58,7 +60,7 @@
         <div class="categories__list">
           <article class="categories__item">
             <img
-              src="icon-product.png"
+              src="/img/pm.jpg"
               alt="Product Icon"
               class="categories__icon"
             />
@@ -70,7 +72,7 @@
           </article>
           <article class="categories__item">
             <img
-              src="icon-engineering.png"
+              src="/img/frontend.jpg"
               alt="Engineering Icon"
               class="categories__icon"
             />
@@ -81,7 +83,11 @@
             </p>
           </article>
           <article class="categories__item">
-            <img src="icon-data.png" alt="Data Icon" class="categories__icon" />
+            <img
+              src="/img/data_Science.jpg"
+              alt="Data Icon"
+              class="categories__icon"
+            />
             <h3 class="categories__item-title">School of Data</h3>
             <p class="categories__item-description">
               Delve into the world of data analysis, science, and engineering to
@@ -99,7 +105,7 @@
         <div class="courses__list">
           <article class="courses__item">
             <img
-              src="icon-design.png"
+              src="/img/product_Design.jpg"
               alt="Product Design Icon"
               class="courses__icon"
             />
@@ -111,7 +117,7 @@
           </article>
           <article class="courses__item">
             <img
-              src="icon-data-science.png"
+              src="/img/data-analysis.jpg"
               alt="Data Science Icon"
               class="courses__icon"
             />
@@ -123,7 +129,7 @@
           </article>
           <article class="courses__item">
             <img
-              src="icon-backend.png"
+              src="/img/backend.jpg"
               alt="Backend Development Icon"
               class="courses__icon"
             />
@@ -147,34 +153,36 @@
           assist!
         </p>
         <form class="contact__form" action="#" method="POST">
-          <div class="contact__form-group">
-            <label for="name" class="contact__label">Your Name</label>
+          <div class="contact__form--group">
+            <label for="name" class="contact__form--label">Your Name</label>
             <input
               type="text"
               id="name"
               name="name"
-              class="contact__input"
+              class="contact__form--input"
               placeholder="John Doe"
               required
             />
           </div>
-          <div class="contact__form-group">
-            <label for="email" class="contact__label">Your Email</label>
+          <div class="contact__form--group">
+            <label for="email" class="contact__form--label">Your Email</label>
             <input
               type="email"
               id="email"
               name="email"
-              class="contact__input"
+              class="contact__form--input"
               placeholder="john@example.com"
               required
             />
           </div>
-          <div class="contact__form-group">
-            <label for="message" class="contact__label">Your Message</label>
+          <div class="contact__form--group">
+            <label for="message" class="contact__form--label"
+              >Your Message</label
+            >
             <textarea
               id="message"
               name="message"
-              class="contact__textarea"
+              class="contact__form--textarea"
               placeholder="Write your message here"
               rows="4"
               required

@@ -25,13 +25,13 @@
 }
 
 .nav__btn--hot, .nav__btn--main {
-  color: #f2f2f2;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
   padding: 8px 16px;
   border-radius: 50px;
   width: 150px;
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .nav__btn {
@@ -41,8 +41,14 @@
 .nav__btn--main {
   background-color: #ff6f61;
 }
+.nav__btn--main:hover {
+  background-color: rgb(255, 41.2784810127, 20.5);
+}
 .nav__btn--hot {
   background-color: #00ff00;
+}
+.nav__btn--hot:hover {
+  background-color: #66ff66;
 }
 
 /*# sourceMappingURL=style.css.map */
