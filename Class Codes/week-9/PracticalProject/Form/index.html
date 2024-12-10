@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Component</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <form id="signupForm" novalidate>
+      <!-- Email Field -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" required aria-describedby="emailError" />
+      <span class="hidden error" id="emailError" role="alert">
+        Please enter a valid email address (e.g., user@example.com).
+      </span>
+
+      <!-- Password Field -->
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        required
+        minlength="8"
+        aria-describedby="passwordError"
+      />
+      <span class="hidden error" id="passwordError" role="alert">
+        Password must be at least 8 characters and include at least one number.
+      </span>
+
+      <!-- Phone Number Field -->
+      <label for="phone">Phone Number:</label>
+      <input
+        type="tel"
+        id="phone"
+        pattern="[0-9]{10}"
+        required
+        aria-describedby="phoneError"
+      />
+      <span class="hidden error" id="phoneError" role="alert">
+        Please enter a valid 10-digit phone number.
+      </span>
+
+      <!-- Submit Button -->
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>

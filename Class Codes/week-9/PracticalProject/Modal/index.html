@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tab Component</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Trigger Button -->
+    <button id="openModal" class="modal-trigger">Open Modal</button>
+
+    <!-- Modal Overlay -->
+    <div
+      class="hidden modal"
+      id="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDescription"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">Modal Title</h2>
+          <button id="closeModal" class="close-button" aria-label="Close Modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body" id="modalDescription">
+          <p>
+            This is a more advanced modal window example with structured
+            content.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-action" id="confirmAction">Confirm</button>
+          <button id="closeModalFooter" class="modal-action secondary">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

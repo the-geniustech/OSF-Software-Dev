@@ -1,0 +1,44 @@
+/* @media (condition) { */
+/* CSS rules for specifict screen sizes */
+/* } */
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: #0000ff;
+  }
+}
+
+@media (min-width: 750px) {
+  body {
+    background-color: #00ff00;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: #ff0000;
+  }
+}
+
+/* @media (max-width: 1024px) {
+  body {
+    background-color: #ff0000;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    background-color: #00ff00;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: #0000ff;
+  }
+} */
