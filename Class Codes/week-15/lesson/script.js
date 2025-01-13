@@ -1,37 +1,105 @@
 'use strict';
-const fruits = ['apple', 'orange', 'banana'];
-console.log(fruits[0]);
+/* const firstName = 'Segun';
+const lastName = 'Yinka';
 
-const [firstFruit, , banana, grape = 'out of stock'] = [
-  'apple',
-  'orange',
-  'banana',
-];
+// Short circuiting (and &&)
+const userName = firstName && lastName;
 
-console.log(firstFruit, banana, grape);
+console.log(userName);
+
+// Short circuiting (or ||)
+const userName2 = firstName || lastName;
+console.log(userName2);
+
+// Nullish coalescing
+const greeting = null;
+const greeting2 = 'Hello';
+
+const message = greeting ?? greeting2;
+console.log(message);
+
+let x = 20;
+
+x += 10;
+console.log(x);
+
+// Logical assignment operator (&&)
+let y = 5;
+y &&= 20;
+console.log(y);
+
+// Logical assignment operator (||)
+let z = null;
+z ||= 50;
+console.log(z);
+
+// Logical assignment operator (??)
+let a = 5;
+a ??= 13;
+console.log(a);
+
+///////////////////////////////
+// For of loop
+const incomes = [20, 75, 28, 16, 34, 28, 20, 72];
+let totalIncome = 0;
+
+for (const income of incomes) {
+  totalIncome += income;
+}
+
+console.log(totalIncome);
+
+// for (let i = 0; i < incomes.length; i++) {
+//   totalIncome += incomes[i];
+// }
+
+const fruits = ['Apple', 'Orange', 'Banana', 'Cucumber'];
+
+for (const [index, fruit] of fruits.entries()) {
+  console.log(`${fruit} is at index ${index}`);
+}
+
+const propNames = ['age', 'name'];
 
 const user = {
-  fullName: 'Victor',
-  job: 'Software Dev',
-  friends: ['Silas', 'Dammy', 'Yinka'],
+  [propNames[1]]: 'Segun',
+  [propNames[0]]: 50,
+  greeting() {
+    alert(`You are welcome back ${this.name}`);
+  },
 };
 
-console.log(user.fullName);
-console.log(user['job']);
+console.log(user.age, user.name);
 
-const {
-  job: jobTitle,
-  fullName,
-  gender = 'Undisclose',
-} = {
-  fullName: 'Victor Silas',
-  job: 'Software Dev',
-  friends: ['Silas', 'Dammy', 'Yinka'],
-  // gender: 'male',
+// user.greeting();
+
+const email = 'test@example.com';
+
+// Optional chaining
+const userData = {
+  fullName: 'Segun Hidee',
+  job: 'Software Engineer',
+  email,
 };
+console.log(userData?.email?.toLowerCase());
 
-console.log(fullName, jobTitle, gender);
+console.log(userData);
 
+// user?.greeting?.();
+
+for (const [key, value] of Object.entries(userData)) {
+  console.log(`Key: ${key} == Value: ${value}`);
+}
+
+for (const key of Object.keys(userData)) {
+  console.log(`Key: ${key}`);
+}
+
+for (const value of Object.values(userData)) {
+  console.log(`Value: ${value}`);
+}
+
+// Class work
 const books = [
   {
     title: 'Algorithms',
@@ -257,21 +325,149 @@ const books = [
   },
 ];
 
-const [firstBook, secondBook] = books;
+function hasExamplesInJava(book) {
+  return book.programmingLanguage === 'Java' || 'no data available';
+}
 
-const [, , thirdBook] = books;
+console.log(hasExamplesInJava(books[1]));
 
-const ratings = [
-  ['rating', 4.19],
-  ['ratingsCount', 144584],
+for (const book of books) {
+  book.onlineContent && console.log(`${book.title} provides online content`);
+}
+
+const fullName = 'Hidee';
+const age = 20;
+const hasDriversLicense = true;
+
+if (age >= 18 && hasDriversLicense) {
+  console.log(`${fullName} can drive`);
+} else {
+  console.log(`${fullName} cannot drive`);
+}
+
+age >= 18 && hasDriversLicense && console.log(`${fullName} can drive`);
+ */
+const fruitsArray = [
+  'Apple',
+  'Orange',
+  'Banana',
+  'Apple',
+  'Cucumber',
+  'Banana',
 ];
 
-const [[, rating], [, ratingsCount]] = ratings;
+console.log(fruitsArray.includes('Grape'));
 
-console.log(rating, ratingsCount);
+fruitsArray[1] = 'Tomato';
+console.log(fruitsArray);
+fruitsArray.push('Guava');
+console.log(fruitsArray);
 
-const ratingStars = [63405, 1808];
+const uniqueValues = new Set([
+  'Apple',
+  'Orange',
+  'Banana',
+  'Apple',
+  'Cucumber',
+  'Banana',
+]);
 
-const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+console.log(uniqueValues.has('Orange'));
 
-console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
+uniqueValues.add('Berry');
+uniqueValues.delete('Berry');
+console.log(uniqueValues.size);
+// uniqueValues.clear();
+
+console.log(uniqueValues);
+
+const mapObj = new Map([
+  ['name', 'Segun'],
+  ['job', 'Software Engineer'],
+]);
+
+console.log(mapObj.get('name'));
+mapObj.set('email', 'test@example.com');
+mapObj.delete('job');
+console.log(mapObj.has('email'));
+console.log(mapObj.size);
+// mapObj.clear();
+
+console.log(mapObj);
+
+for (const fruit of uniqueValues) {
+  console.log(`I love eating ${fruit}`);
+}
+
+for (const [key, value] of mapObj) {
+  console.log(`Key: ${key} and Value: ${value}`);
+}
+
+// Working with strings
+const str = 'This is a StrIng';
+console.log(str);
+console.log(str.length);
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+
+const fruitInput = 'Apple Orange Banana Apple Cucumber Olive';
+
+const favouriteFruits = fruitInput.split(' ');
+
+console.log(favouriteFruits.join(', '));
+
+const creditCardNumber = '557785783478478784';
+
+console.log(creditCardNumber.slice(-4).padStart(creditCardNumber.length, '*'));
+
+console.log(fruitInput.slice(6));
+
+const userName = ' Segun Akorede          ';
+console.log(userName.trim());
+
+console.log(fruitInput.slice(fruitInput.indexOf('O')));
+
+console.log(fruitInput.indexOf('O'));
+console.log(fruitInput.lastIndexOf('O'));
+
+console.log(fruitInput.includes('Orange'));
+
+console.log(creditCardNumber.startsWith('5577'));
+console.log(str.endsWith('ng'));
+
+// Solution to number 3
+// Data for Challenge #3
+const genres = ['Pop', 'Rock', 'Jazz', 'Pop', 'Classical', 'Jazz'];
+
+const songs = [
+  { title: 'Imagine', artist: 'John Lennon', duration: 183 },
+  { title: 'Bohemian Rhapsody', artist: 'Queen', duration: 354 },
+  { title: 'Hotel California', artist: 'Eagles', duration: 391 },
+];
+
+// #3.1
+const uniqueGenres = new Set(genres);
+console.log(uniqueGenres);
+/*
+const songsMap1 = new Map([
+  ['Imagine', { artist: 'John Lennon', duration: 183 }],
+  ['Bohemian Rhapsody', { artist: 'Queen', duration: 354 }],
+  ['Hotel California', { artist: 'Eagles', duration: 391 }],
+]); */
+
+// 3.2
+const songsMap = new Map();
+
+for (const { title, ...details } of songs) {
+  songsMap.set(title, details);
+}
+
+console.log(songsMap);
+
+// #3.3
+console.log(songsMap.get('Imagine'));
+
+// 3.4
+for (const [song, details] of songsMap) {
+  console.log(song, details);
+}

@@ -1,36 +1,75 @@
 'use strict';
-const fruits = ['apple', 'orange', 'banana'];
-console.log(fruits[0]);
+// Spread Operator (for an array)
+const colors = ['red', 'green', 'blue'];
+console.log('Colors: ', colors);
 
-const [firstFruit, , banana, grape = 'out of stock'] = [
-  'apple',
-  'orange',
-  'banana',
-];
+// Copying an array
+const moreColors = [...colors, 'orange', 'black'];
+console.log('More Colors: ', moreColors);
 
-console.log(firstFruit, banana, grape);
+// merging arrays
+const allColors = [...colors, ...moreColors];
+console.log(allColors);
 
-const user = {
-  fullName: 'Victor',
-  job: 'Software Dev',
-  friends: ['Silas', 'Dammy', 'Yinka'],
+// Spread Operator (for an object)
+const user = { name: 'Yinka', job: 'Software Dev' };
+console.log(user);
+
+// Copying an object
+const userCopy = {
+  ...user,
+  job: 'Product Designer',
+  email: 'example@test.com',
+};
+console.log(userCopy);
+
+const userPersonalInfo = {
+  age: 48,
+  gender: 'female',
 };
 
-console.log(user.fullName);
-console.log(user['job']);
+// Merging objects
+const userDetails = { ...user, ...userPersonalInfo };
+console.log(userDetails);
 
-const {
-  job: jobTitle,
-  fullName,
-  gender = 'Undisclose',
-} = {
-  fullName: 'Victor Silas',
-  job: 'Software Dev',
-  friends: ['Silas', 'Dammy', 'Yinka'],
-  // gender: 'male',
+// Rest Pattern/Operator
+const fruits = ['orange', 'banana', 'mango', 'grape', 'watermelon'];
+
+const [orange, banana, ...otherFruits] = fruits;
+
+console.log(orange, banana, otherFruits);
+
+// Rest Pattern with Function Parameter
+function sum(...numbers) {
+  let total = 0;
+
+  console.log(numbers);
+
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+
+  return total;
+}
+
+console.log(sum(1, 5, 6, 8));
+console.log(sum(2, 3, 4, 5, 8, 856, 90, 100));
+
+const numbers = (firstColor, secondColor, _, ...otherColors) => {
+  console.log(firstColor, secondColor, otherColors);
 };
 
-console.log(fullName, jobTitle, gender);
+numbers('red', 'green', 'blue', 'orange', 'black');
+
+// Rest Pattern in Object
+console.log(userDetails);
+const { name, job, ...otherUserData } = userDetails;
+
+console.log(name, job, otherUserData);
+
+const arrFn = arg => console.log(arg);
+
+// console.log(...str);
 
 const books = [
   {
@@ -257,21 +296,30 @@ const books = [
   },
 ];
 
-const [firstBook, secondBook] = books;
+// Solutions
+// #1
+const bookAuthors = [books[0].author, books[1].author];
+console.log(bookAuthors);
 
-const [, , thirdBook] = books;
+// #2
+function spellWord(word) {
+  console.log(...word);
+}
+spellWord('JavaScript');
+spellWord('VictorSilas');
 
-const ratings = [
-  ['rating', 4.19],
-  ['ratingsCount', 144584],
-];
+// #3
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
 
-const [[, rating], [, ratingsCount]] = ratings;
+// #4
+const { publisher: bookPublisher, ...resOfTheBook } = books[1];
 
-console.log(rating, ratingsCount);
+// #5
+function printBookAuthorsCount(title, ...authors) {
+  console.log('Title: ', title);
+  console.log('Authors: ', authors);
+  console.log(`The book ${title} has ${authors.length} authors`);
+}
 
-const ratingStars = [63405, 1808];
-
-const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
-
-console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
+printBookAuthorsCount('Focus', 'Samad', 'Oreoluwa', 'Akorede');

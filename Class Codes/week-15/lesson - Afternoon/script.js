@@ -1,36 +1,92 @@
 'use strict';
-const fruits = ['apple', 'orange', 'banana'];
-console.log(fruits[0]);
+/* // Short circuiting with (And &&)
+const firstName = 0;
+const lastName = 'Lizzy';
 
-const [firstFruit, , banana, grape = 'out of stock'] = [
-  'apple',
-  'orange',
-  'banana',
-];
+const userName = firstName && lastName;
+console.log(userName);
 
-console.log(firstFruit, banana, grape);
+// Short circuiting with (Or ||)
+const userName2 = firstName || lastName;
+console.log(userName2);
+
+// Nulish coalescing (??)
+const age = undefined;
+const defaultAge = 18;
+
+const userAge = age ?? defaultAge;
+console.log(userAge);
+
+// Logical Assignment operator
+let x = 0;
+x += 9;
+
+let y = 10;
+y &&= 89;
+y &&= 70;
+console.log(y);
+
+let z = null;
+z ||= 100;
+console.log(z);
+
+let a = null;
+a ??= 100;
+console.log(a);
+
+// for of loop
+const incomes = [40, 40000, 200, 76, 1000, 3174.12];
+let totalIncome = 0;
+
+for (const income of incomes) {
+  totalIncome += income;
+}
+
+console.log(totalIncome);
+
+const fruits = ['Apple', 'Orange', 'Banana', 'Cucumber', 'Gruava'];
+
+for (const [i, fruit] of fruits.entries()) {
+  console.log(`${fruit} is number ${i + 1} on the list of fruits.`);
+}
+
+const propNames = ['fullName', 'birthYear'];
+
+const email = 'tESt@example.COM';
 
 const user = {
-  fullName: 'Victor',
-  job: 'Software Dev',
-  friends: ['Silas', 'Dammy', 'Yinka'],
+  [propNames[0]]: 'Michael Temi',
+  birthYear: 2000,
+  email,
+  calcAge() {
+    this.age = 2025 - this.birthYear;
+
+    return this.age;
+  },
 };
 
+console.log(user);
 console.log(user.fullName);
-console.log(user['job']);
+console.log(user.calcAge?.());
 
-const {
-  job: jobTitle,
-  fullName,
-  gender = 'Undisclose',
-} = {
-  fullName: 'Victor Silas',
-  job: 'Software Dev',
-  friends: ['Silas', 'Dammy', 'Yinka'],
-  // gender: 'male',
+console.log(user.email?.toLowerCase());
+
+const userData = {
+  name: 'Tajudeen Elizabeth',
+  job: 'Software Engineer',
+  skills: ['HTML', 'CSS', 'JavaScript'],
 };
 
-console.log(fullName, jobTitle, gender);
+for (const [key, value] of Object.entries(userData)) {
+  console.log(`Key: ${key} & Value: ${value}`);
+}
+
+for (const key of Object.keys(userData)) {
+  console.log(`Key: ${key}`);
+}
+for (const value of Object.values(userData)) {
+  console.log(`Value: ${value}`);
+}
 
 const books = [
   {
@@ -257,21 +313,80 @@ const books = [
   },
 ];
 
-const [firstBook, secondBook] = books;
+function hasExamplesInJava(book) {
+  return book.programmingLanguage === 'Java' || 'No data available';
+}
 
-const [, , thirdBook] = books;
+console.log(hasExamplesInJava(books[1]));
+*/
 
-const ratings = [
-  ['rating', 4.19],
-  ['ratingsCount', 144584],
+const user = [1, 2];
+
+const users = {
+  name: 'Temi',
+  age: 30,
+};
+
+const footballClubs = ['Liverpool', 'Chelsea', 'Arsenal'];
+
+const arrOfFruits = [
+  'Apple',
+  'Orange',
+  'Cucumber',
+  'Watermelon',
+  'Orange',
+  'Apple',
 ];
+// Set
+const uniqueFruits = new Set(arrOfFruits);
 
-const [[, rating], [, ratingsCount]] = ratings;
+console.log('Array: ', arrOfFruits);
+console.log('Sets: ', uniqueFruits);
+console.log(arrOfFruits[1]);
+uniqueFruits.add('Banana');
+uniqueFruits.delete('Orange');
+console.log(uniqueFruits.has('Apple'));
+console.log(uniqueFruits.size);
+// uniqueFruits.clear();
+console.log(uniqueFruits);
 
-console.log(rating, ratingsCount);
+for (const fruit of uniqueFruits) {
+  console.log(`I love eating ${fruit}`);
+}
 
-const ratingStars = [63405, 1808];
+const userDataMap = new Map([
+  ['name', '   Temi     '],
+  ['job', 'Software Engineer'],
+  ['email', 'test@example.com'],
+]);
 
-const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+console.log(userDataMap);
+userDataMap.set('gender', 'male');
+userDataMap.delete('email');
+console.log(userDataMap);
+console.log(userDataMap.get('name'));
+console.log(userDataMap.size);
+console.log(userDataMap.has('email'));
 
-console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
+for (const [key, value] of userDataMap) {
+  console.log(`Key: ${key} <===> Value: ${value}`);
+}
+
+const str = 'This is a string';
+const emailStr = 'teSt@eXAmple.cOm';
+console.log('Initail: ', str);
+console.log('Initail: ', emailStr);
+// Working with String
+console.log(str.length);
+console.log(emailStr.toLowerCase());
+console.log(str.toUpperCase());
+
+const fruitsStr = 'Apple Orange Cucumber Watermelon';
+
+console.log(fruitsStr);
+
+const fruits = fruitsStr.split(' ');
+console.log(fruits);
+
+console.log(fruitsStr.slice(5, 12));
+console.log(fruitsStr.slice(22));
