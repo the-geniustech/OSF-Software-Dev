@@ -36,4 +36,37 @@ const isEven = num => (num % 2 === 0 ? true : false);
 
 console.log(isEven(11));
 
-// const now
+const now = new Date();
+console.log(now);
+console.log(new Date(1990, 10, 25, 22, 50, 12));
+
+console.log(`${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`);
+console.log(navigator.language);
+
+const dateFormated = Intl.DateTimeFormat('ar-SY').format(now);
+console.log(dateFormated);
+
+console.log(`300,20€`);
+console.log(`$300.20`);
+
+console.log(
+  Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR' }).format(
+    300.2
+  )
+);
+
+console.log('Before timeout');
+setTimeout(function () {
+  console.log('Executed after 3 seconds');
+}, 1000 * 3);
+
+console.log('After timeout');
+
+// setInterval(function () {
+//   const now = new Date();
+
+//   console.log(`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
+// }, 1000);
+
+// let minute = 10;
+// let seconds = 0;
